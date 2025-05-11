@@ -8,6 +8,8 @@ public class Main {
         System.out.println(hasTeen(13, 20, 10));
         System.out.println(loneTeen(99, 99));
         System.out.println(delDel("abc"));
+        System.out.println(mixStart("mix snacks"));
+        System.out.println(startOz("bzoo"));
     }
 
     public static boolean startHi(String str) {
@@ -37,4 +39,27 @@ public class Main {
         return str;
     }
 
+    public static boolean mixStart(String str) {
+        if (str.length() < 3){
+            return false;
+        }
+
+        String two = str.substring(1, 3);
+
+        return two.equals("ix");
+    }
+
+    public static String startOz(String str) {
+        String result = "";
+
+        if (!str.isEmpty() && str.charAt(0)=='o') {
+            result = result + str.charAt(0);
+        }
+
+        if (str.length() >= 2 && str.charAt(1)=='z') {
+            result = result + str.charAt(1);
+        }
+
+        return result;
+    }
 }
