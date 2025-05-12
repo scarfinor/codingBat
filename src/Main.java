@@ -10,6 +10,10 @@ public class Main {
         System.out.println(delDel("abc"));
         System.out.println(mixStart("mix snacks"));
         System.out.println(startOz("bzoo"));
+        System.out.println(intMax(1, 2, 3));
+        System.out.println(close10(13, 7));
+        System.out.println(in3050(30, 41));
+        System.out.println(max1020(9, 11));
     }
 
     public static boolean startHi(String str) {
@@ -62,4 +66,47 @@ public class Main {
 
         return result;
     }
+
+    public static int intMax(int a, int b, int c) {
+        if (a > b && a > c ) {
+            return a;
+        } else if (b > a && b > c) {
+            return b;
+        } else
+            return c;
+    }
+
+    public static int close10(int a, int b) {
+        int aDiff = Math.abs(a - 10);
+        int bDiff = Math.abs(b - 10);
+
+        if (aDiff < bDiff) {
+            return a;
+        }
+        if (bDiff < aDiff) {
+            return b;
+        }
+        return 0;
+    }
+
+    public static boolean in3050(int a, int b) {
+        return a >= 30 && a <= 40 && b >= 30 && b <= 40 || a >= 40 && a <= 50 && b >= 40 && b <= 50;
+    }
+
+    public static int max1020(int a, int b) {
+        if (a >= 10 && a <= 20 && a > b) {
+            return a;
+        }
+        if (b >= 10 && b <= 20 && b > a) {
+            return b;
+        }
+        if (a >= 10 && a <= 20 && a < b) {
+            return a;
+        }
+        if (b >= 10 && b <= 20 && b < a) {
+            return b;
+        } else
+            return 0;
+    }
+
 }
